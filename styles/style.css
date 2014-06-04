@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+/**
+* Stylesheet Index:
+* =================
+*
+* 0. Reset
+* 1. Imports
+* 2. Elements
+* 3. ID & Class
+* 4. Pseudoclass
+* 5. Media Queries
+**/
+
+/* 0. Reset */
+
+html, body
+{
+    height: 100%;
+}
+
+/* 1. Imports */
+
+
+/* 2. Elements */
+
+a {
+	color: #0095DD;
+}
+
+a:hover {
+	color: #00539F;
+}
+
+body {
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0, #D7D3C8),
+		color-stop(1, #F6F4EC)
+	);
+	background-image: -o-linear-gradient(bottom, #D7D3C8 0%, #F6F4EC 100%);
+	background-image: -moz-linear-gradient(bottom, #D7D3C8 0%, #F6F4EC 100%);
+	background-image: -webkit-linear-gradient(bottom, #D7D3C8 0%, #F6F4EC 100%);
+	background-image: -ms-linear-gradient(bottom, #D7D3C8 0%, #F6F4EC 100%);
+	background-image: linear-gradient(to bottom, #D7D3C8 0%, #F6F4EC 100%);
+
+	border-top: 2px solid #fff;
+	font-family: 'Open Sans';
+	font-size: 14px;
+  	line-height: 20px;
+	margin: 0;
+}
+
+h1 {
+  font-size: 48px;
+  letter-spacing: -2px;
+  line-height: 100%;
+}
+h2 {
+  font-size: 32px;
+  letter-spacing: -1px;
+  line-height: 100%;
+}
+h3 {
+  font-size: 28px;
+  letter-spacing: -0.5px;
+  line-height: 100%;
+}
+h4 {
+  font-size: 24px;
+  letter-spacing: -0.25px;
+  line-height: 100%;
+}
+
+/* 3. ID & Class */
+
+.large {
+  font-size: 72px;
+  letter-spacing: -3px;
+  line-height: 100%;
+}
+
+.small, small {
+  font-size: 12px;
+  line-height: 100%;
+}
+
+.text-container {
+	text-align: center;
+	font-size: 20px;
+	margin-top: 20%;
+}
+
+/* 4. Pseudoclass */
+
+/* 5. Media Queries */
