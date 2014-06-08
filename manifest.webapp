@@ -1,0 +1,18 @@
+{
+  "name": "Ballot",
+  "description": "A simple application to automate the selection procedure of Mozilla Reps - Rep of the Month.",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/images/icon-128.png",
+    "64": "/iamges/icon-64.png",
+    "60": "/images/icon-60.png",
+    "48": "/iamges/icon-48.png",
+    "32": "/images/icon-32.png",
+    "16": "/iamges/icon-16.png"
+  },
+  "developer": {
+    "name": "Sayak Sarkar",
+    "url": "http://sayak.in"
+  },
+  "default_locale": "en"
+}
