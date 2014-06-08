@@ -1,46 +1,83 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <!-- Meta Stuff -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-        <meta http-equiv="X-UA-Compatible" content="chrome=1">
-        
-        <!-- Page Title -->
-        <title>ROM Krisis</title>
-
-        <!--Favicon-->
-        <link href="images/favicon.ico" rel="icon" />
+  <head>
+    <!-- Meta Stuff -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
     
-        <!--Library / Dependency Scripts-->
+    <!-- Page Title -->
+    <title>ROM Krisis</title>
 
-        <!--Site Specific Scripts-->
-        <script src="scripts/script.js"></script>
-        
-        <!--Library / Dependency Stylesheets-->
-        <link href="http://mozorg.cdn.mozilla.net/media/css/tabzilla-min.css" rel="stylesheet" />
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' />
-        <!--Site Specific Stylesheets-->
-        <link href="styles/style.css" rel="stylesheet" />
-        
-    </head>
+    <!--Favicon-->
+    <link href="images/icon-32.png" rel="icon" />
+  
+    <!--Library / Dependency Scripts-->
 
-    <body>
-        <header>
-            <a href="https://www.mozilla.org/" id="tabzilla">mozilla</a>
-        </header>
+    <!--Site Specific Scripts-->
+    <script src="scripts/script.js"></script>
+    
+    <!--Library / Dependency Stylesheets-->
+    <link href="http://mozorg.cdn.mozilla.net/media/css/tabzilla-min.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' />
+    <!--Site Specific Stylesheets-->
+    <link href="styles/style.css" rel="stylesheet" />
+    
+  </head>
 
-        <div class="text-container">
-            Awesomeness under construction! ;)
-        </div>
-        
-        <!--No-Script Text for ancient browsers-->
-        <noscript>
-                JavaScript has to be enabled on your browser to get this working.
-        </noscript>
-    </body>
-    <footer>
-        <!-- Tabzilla script -->
-        <script src="http://mozorg.cdn.mozilla.net/tabzilla/tabzilla.js"></script>
-    </footer>
+  <body>
+    <header>
+      <a href="https://www.mozilla.org/" id="tabzilla">mozilla</a>
+    </header>
+
+    <!-- Home Screen -->
+    <div id="main">
+      <img src="images/remo.png" id="logo" alt="ReMo Logo" />
+      <div class="title">Rep of The Month</div>
+      <button class="button" onclick="nominate()">Nominate</button> <br/>
+      <button class="button" onclick="vote()">Vote</button>
+    </div>
+
+    <!-- Nomination Screen -->
+    <div id="nominate" class="hidden">
+      <div class="title">Nominate a Rep</div>
+      <form action="" method="get">
+        <label>Name:</label> <br/>
+        <input name="name"> <br/> <br/>
+        <label>Nominated by:</label> <br/> 
+        <input name="nominator"> <br/> <br/>
+        <label>Profile on reps.mozilla.org:</label> <br/> 
+        <input name="profile"> <br/> <br/>
+        <label>Reason:</label> <br/>
+        <textarea name="reason" rows="10" placeholder="Why you think this rep can be the rep of the month?"></textarea> <br/> <br/>
+        <button class="button" onClick="submitNomination(this.form)">Submit</button>
+        <button class="button" onClick="back('nominate')">Back</button>
+      </form>
+    </div>
+
+    <!-- Voting Screen -->
+    <div id="vote" class="hidden">
+      <div class="title">Voting List</div>
+      <ol>
+        <li>
+          <label>Name:</label> <span id="name"></span> <br/>
+          <label>Nominator:</label> <span id="nominator"></span> <br/>
+          <label>Reps Profile:</label> <span id="profile"></span> <br/>
+          <label>Reason:</label> <br/> <span id="reason"></span> <br/>
+          <button class="add-vote">+1</button>
+        </li>
+        <button class="button" onclick="submitVote()">Submit</button>
+        <button class="button" onClick="back('vote')">Back</button>
+      </ol>
+    </div>
+    
+    <!--No-Script Text for ancient browsers-->
+    <noscript>
+        JavaScript has to be enabled on your browser to get this working.
+    </noscript>
+  </body>
+  <footer>
+    <!-- Tabzilla script -->
+    <script src="http://mozorg.cdn.mozilla.net/tabzilla/tabzilla.js"></script>
+  </footer>
 </html>
